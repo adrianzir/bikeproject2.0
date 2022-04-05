@@ -1,12 +1,3 @@
-let password = 12345 ;
-let dato = parseInt(prompt("enter your password please"));
-
-
-while ( dato != password) {
-    alert("la contraseña ingresada es incorrecta, intentalo de nuevo");
-    dato = parseInt(prompt("enter your password please")) ;
-}
-
 let question = prompt("te gustaria recibir nuestras notificaciones en tu correo? escribe si/no.");
 
 switch (question){
@@ -20,3 +11,15 @@ switch (question){
     alert("responde 'si' o 'no' por favor");
     break;
 }
+
+let getDiscount = alert("obten un 15% de descuento en tu primera compra suscribiendote!");
+let purchase = parseInt(prompt("ingresa el valor de tu compra"));
+let discount = purchase *(15/100) ;
+
+
+function finalPriceWithDiscount(){
+    let totalPrice = purchase - discount;
+    alert("El total de tu compra es " + totalPrice + ".");
+}
+
+let display = finalPriceWithDiscount();
