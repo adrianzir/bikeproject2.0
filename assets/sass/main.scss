@@ -5,6 +5,8 @@
     padding: 0;
     box-sizing: border-box;
 }
+// styles
+
 .mainsection{
     background-image: url("../images/wp2747667.jpg");
     opacity: 0.8;
@@ -24,12 +26,9 @@
 
 }
 #ad{
-    position: relative;
     width: 500px;
     height: auto;
     text-transform: uppercase;
-    left: 500px ;
-
 }
 #ad>button{
     width: 400px;
