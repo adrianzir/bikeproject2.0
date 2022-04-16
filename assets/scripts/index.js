@@ -93,3 +93,34 @@ const trigger = () =>{
     console.log(agregar)
 }
  
+//LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+
+// function porCadaElem(array, funcion){
+//     for(const el of array){
+//         funcion(el);
+//     }
+// }
+
+let numeros = [
+    {nombre: "guantes Mtb", precio: 10999},
+    {nombre: "tricota", precio: 26000},
+    {nombre :"masaMtb", precio: 55000},
+    {nombre: "termoBici", precio: 10999}
+];
+
+porCadaElem(numeros, console.log);
+
+numeros.forEach((el) =>{
+    console.log(el);
+})
+let search= prompt("que deseas buscar?");
+
+let buscar = numeros.find(obj => {
+    return obj.nombre == search
+});
+
+console.log(buscar)
+
+// let filtrarPorPrecio = numeros.filter(obj => 
+//     {return obj.precio <= 1000});
+// console.log(filtrarPorPrecio)
