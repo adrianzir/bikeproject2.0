@@ -5,11 +5,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-// styles
+$darkblue:#010422;
+//imports
+@import "indexform";
+@import "navbar";
 
+// styles
 .mainsection{
     background-image: url("../images/wp2747667.jpg");
-    opacity: 0.8;
+    opacity: 0.95;
     background-position: center;
     background-repeat: repeat;
     height: 800px;
@@ -18,6 +22,9 @@
 #footer{
     height: 150px;
     background-color: rgba(0, 0, 0, 0.753);
+    >i{
+        color: #fff;
+    }
 }
 #ad>button{
     width: 400px;
@@ -28,6 +35,4 @@
     padding: 0.25rem;
     color: white;
     text-transform: capitalize;
-
-
 }

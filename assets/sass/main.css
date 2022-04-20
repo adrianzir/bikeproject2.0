@@ -5,28 +5,10 @@
           box-sizing: border-box;
 }
 
-.mainsection {
-  background-image: url("../images/wp2747667.jpg");
-  background-position: center;
-  background-repeat: repeat;
-  height: 800px;
+.form-section {
+  height: auto;
   width: 100%;
-}
-
-.navv {
-  opacity: 0.5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
-#footer {
-  height: 150px;
-  background-color: rgba(0, 0, 0, 0.753);
+  background-color: #010422;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,23 +19,64 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 1rem;
 }
 
-#footer > ul {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  display: inline;
-  width: 100px;
+.form-section .register-form {
+  height: 90%;
+  width: 30%;
+  background-color: white;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
 }
 
-#ad {
-  position: relative;
-  width: 500px;
-  height: auto;
-  text-transform: uppercase;
-  left: 500px;
+.top-bar {
+  background-color: #010422;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  height: 50px;
+  color: #fff;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+.top-bar ul {
+  padding: 0.5rem;
+}
+
+.top-bar ul li {
+  list-style: none;
+  margin: 0 10px;
+  text-transform: capitalize;
+}
+
+.mainsection {
+  background-image: url("../images/wp2747667.jpg");
+  opacity: 0.95;
+  background-position: center;
+  background-repeat: repeat;
+  height: 800px;
+  width: 100%;
+}
+
+#footer {
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.753);
+}
+
+#footer > i {
+  color: #fff;
 }
 
 #ad > button {

@@ -42,30 +42,6 @@ const packPremiun = {  //Objeto   1   <-------------------
     },
     cupoTours: "el durazno"
 }
-
-class Users {
-    constructor(nombre, email, edad) { // construcctor   1   <-------------------//
-        this.nombre = nombre;
-        this.email = email;
-        this.edad = edad;
-        this.welcome = 'Gracias por registrarte en nuestro website, bienvenid@ ' + this.nombre;
-    }
-} 
-const user1 = new Users("adrian","adrianironside@gmail.com", 21);
-const user2 = new Users("gabriela","magaa2508@gmail.com", 25);
-const user3 = new Users("carlos", "cezduk@yahoo.com", 48);
-const user4 = new Users("doja", "catdoja@hotmail.com", 31);
- 
-let nombre = document.querySelector(".name");
-let mail = document.querySelector(".mail-input");
-let age = document.querySelector(".age");
-console.log(nombre.innerText);
-console.log(mail.innerText);
-console.log(age.innerText);
-const register = () =>{
-    const user5 = new Users(nombre,mail,age);
-    return console.log(user5);
-}
 /*
 ========================================= Arrays ===============================================
 */
@@ -101,26 +77,58 @@ const trigger = () =>{
 //     }
 // }
 
-let numeros = [
-    {nombre: "guantes Mtb", precio: 10999},
-    {nombre: "tricota", precio: 26000},
-    {nombre :"masaMtb", precio: 55000},
-    {nombre: "termoBici", precio: 10999}
-];
+// let numeros = [
+//     {nombre: "guantes Mtb", precio: 10999},
+//     {nombre: "tricota", precio: 26000},
+//     {nombre :"masaMtb", precio: 55000},
+//     {nombre: "termoBici", precio: 10999}
+// ];
 
-porCadaElem(numeros, console.log);
+// porCadaElem(numeros, console.log);
 
-numeros.forEach((el) =>{
-    console.log(el);
-})
-let search= prompt("que deseas buscar?");
+// numeros.forEach((el) =>{
+//     console.log(el);
+// })
+// let search= prompt("que deseas buscar?");
 
-let buscar = numeros.find(obj => {
-    return obj.nombre == search
-});
+// let buscar = numeros.find(obj => {
+//     return obj.nombre == search
+// });
 
-console.log(buscar)
+// console.log(buscar)
 
 // let filtrarPorPrecio = numeros.filter(obj => 
 //     {return obj.precio <= 1000});
 // console.log(filtrarPorPrecio)
+//
+//
+//
+//==================================  TRABAJANDO CON EL DOM =======================================
+class Users {
+    constructor(nombre, email, edad) { // construcctor   1   <-------------------//
+        this.nombre = nombre;
+        this.email = email;
+        this.edad = edad;
+        this.welcome = 'Gracias por registrarte en nuestro website, bienvenid@ ' + this.nombre;
+    }
+} 
+const user1 = new Users("adrian","adrianironside@gmail.com", 21);
+const user2 = new Users("gabriela","magaa2508@gmail.com", 25);
+const user3 = new Users("carlos", "cezduk@yahoo.com", 48);
+const user4 = new Users("doja", "catdoja@hotmail.com", 31);
+ 
+let nombre = document.querySelector(".name").value;
+let mail = document.querySelector(".mail-input").value;
+let age = document.querySelector(".age").value;
+
+let form =document.querySelector(".form-section");
+const listaDeUsuarios = []
+
+ let register = () =>{
+    const user5 = new Users(nombre,mail,age);
+    listaDeUsuarios.push(user5);
+}
+
+const newH1 = document.createElement("div");
+newH1.innerHTML= `<h1>Hola ${nombre} bienvenido a nuestro club quieres recibir notificaciones al correo ${mail}</h1>`;
+document.querySelector(".form-section").append(newH1);
